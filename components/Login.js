@@ -1,6 +1,5 @@
 // Dodatkowe biblioteki użyte w tym komponencie to:
 // expo-linear-gradient
-// react-native-vector-icons
 
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
@@ -13,9 +12,9 @@ import {
     TouchableOpacity,
     Pressable,
 } from "react-native";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import AntDesign from "react-native-vector-icons/AntDesign";
-// Użycie expo-linear-gradient, aby móc stworzyć gradient na tle
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import AntDesign from "@expo/vector-icons/AntDesign";
+// Użycie expo-linear-gradient, aby móc stworzyć gradient na tle.
 // React-native nie ma wbudowanego gradientu.
 import { LinearGradient } from "expo-linear-gradient";
 
