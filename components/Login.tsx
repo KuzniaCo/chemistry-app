@@ -18,10 +18,10 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 // React-native nie ma wbudowanego gradientu.
 import { LinearGradient } from "expo-linear-gradient";
 
-const Login = () => {
-    const [frgtPasswd, setFrgtPasswd] = useState(false);
-    const [passwdIcon, setPasswdIcon] = useState("eye-slash");
-    const [isHidden, setIsHidden] = useState(true);
+const Login: React.FC = () => {
+    const [frgtPasswd, setFrgtPasswd] = useState<boolean>(false);
+    const [passwdIcon, setPasswdIcon] = useState<string>("eye-slash");
+    const [isHidden, setIsHidden] = useState<boolean>(true);
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
@@ -183,9 +183,12 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         marginTop: 40,
-        padding: 16,
+        paddingRight: 16,
+        paddingLeft: 16,
+        paddingTop: 8,
+        paddingBottom: 8,
         width: "60%",
-        backgroundColor: "#466178",
+        backgroundColor: "#729fc4",
         borderRadius: 20,
         shadowColor: "rgba(0, 0, 0, 1)",
         elevation: 10,
@@ -211,7 +214,7 @@ const styles = StyleSheet.create({
         color: "#000",
     },
     registerBtn: {
-        marginTop: 40,
+        marginTop: 70,
     },
     iconContainer: {
         width: "100%",
