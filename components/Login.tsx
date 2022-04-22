@@ -13,9 +13,9 @@ import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { LinearGradient } from "expo-linear-gradient";
 
-const Login: React.FC = () => {
-    const [frgtPasswd, setFrgtPasswd] = useState<boolean>(false);
-    const [passwdIcon, setPasswdIcon] = useState<string>("eye-slash");
+const Login = (): JSX.Element => {
+    const [forgotPassword, setForgotPassword] = useState<boolean>(false);
+    const [passwordIcon, setPasswordIcon] = useState<string>("eye-slash");
     const [isHidden, setIsHidden] = useState<boolean>(true);
     return (
         <SafeAreaView style={styles.container}>
@@ -49,10 +49,10 @@ const Login: React.FC = () => {
                             <Pressable
                                 onPressIn={() => {
                                     if (isHidden == true) {
-                                        setPasswdIcon("eye");
+                                        setPasswordIcon("eye");
                                         setIsHidden(!isHidden);
                                     } else {
-                                        setPasswdIcon("eye-slash");
+                                        setPasswordIcon("eye-slash");
                                         setIsHidden(!isHidden);
                                     }
                                 }}
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
                                 }}
                             >
                                 <FontAwesome5
-                                    name={passwdIcon}
+                                    name={passwordIcon}
                                     style={styles.icon}
                                     size={26}
                                 />
@@ -72,30 +72,30 @@ const Login: React.FC = () => {
                         </View>
                         <TextInput
                             secureTextEntry={isHidden}
-                            style={styles.inputPasswd}
+                            style={styles.inputPassword}
                             placeholder="Hasło"
                             placeholderTextColor="#4f5961"
                         ></TextInput>
                     </View>
-                    <TouchableOpacity style={styles.logInBtn}>
+                    <TouchableOpacity style={styles.logInButton}>
                         <Text style={styles.logInText}>Zaloguj się</Text>
                     </TouchableOpacity>
                     <Pressable
-                        onPressIn={() => setFrgtPasswd(true)}
-                        onPressOut={() => setFrgtPasswd(false)}
+                        onPressIn={() => setForgotPassword(true)}
+                        onPressOut={() => setForgotPassword(false)}
                         style={({ pressed }) => [
                             {
                                 borderBottomColor: pressed
                                     ? "#8EA9C2"
                                     : "transparent",
                             },
-                            styles.forgotPasswordBtn,
+                            styles.forgotPasswordButton,
                         ]}
                     >
                         <Text
                             style={[
                                 {
-                                    color: frgtPasswd ? "#8EA9C2" : "#000",
+                                    color: forgotPassword ? "#8EA9C2" : "#000",
                                 },
                             ]}
                         >
@@ -109,7 +109,7 @@ const Login: React.FC = () => {
                                     ? "lightblue"
                                     : "transparent",
                             },
-                            styles.registerBtn,
+                            styles.registerButton,
                         ]}
                     >
                         <Text style={styles.register}>REJESTRACJA</Text>
@@ -157,22 +157,14 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 15,
     },
-    inputPasswd: {
+    inputPassword: {
         color: "black",
         width: "65%",
         height: "100%",
         textAlign: "center",
         fontSize: 15,
     },
-    label: {
-        position: "absolute",
-        bottom: 0,
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        textAlign: "center",
-    },
-    logInBtn: {
+    logInButton: {
         display: "flex",
         alignItems: "center",
         marginTop: 40,
@@ -190,11 +182,7 @@ const styles = StyleSheet.create({
         fontSize: 26,
         color: "white",
     },
-    forgotPassword: {
-        width: 180,
-        marginTop: 40,
-    },
-    forgotPasswordBtn: {
+    forgotPasswordButton: {
         height: 30,
         justifyContent: "center",
         alignItems: "center",
@@ -206,7 +194,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "#000",
     },
-    registerBtn: {
+    registerButton: {
         marginTop: 70,
     },
     iconContainer: {
