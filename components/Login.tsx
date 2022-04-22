@@ -1,6 +1,3 @@
-// Dodatkowe biblioteki użyte w tym komponencie to:
-// expo-linear-gradient
-
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import {
@@ -14,8 +11,6 @@ import {
 } from "react-native";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import AntDesign from "@expo/vector-icons/AntDesign";
-// Użycie expo-linear-gradient, aby móc stworzyć gradient na tle.
-// React-native nie ma wbudowanego gradientu.
 import { LinearGradient } from "expo-linear-gradient";
 
 const Login: React.FC = () => {
@@ -52,8 +47,6 @@ const Login: React.FC = () => {
                         <View style={styles.iconContainer}>
                             <AntDesign name="lock" size={30} color="#000" />
                             <Pressable
-                                // Na kliknięcie ikonki oka zmienia się na przekreślone/nie przekreślone
-                                // oraz pokazuje kropki/całe hasło.
                                 onPressIn={() => {
                                     if (isHidden == true) {
                                         setPasswdIcon("eye");
