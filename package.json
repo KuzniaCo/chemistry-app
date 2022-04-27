@@ -7,7 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "lint": "eslint -c ./.eslintrc.json  '*' ",
+    "lint:fix": "eslint -c ./.eslintrc.json '*' --fix"
   },
   "dependencies": {
     "expo": "~44.0.0",
