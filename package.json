@@ -7,7 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "lint": "eslint -c ./.eslintrc.json  '*' ",
+    "lint:fix": "eslint -c ./.eslintrc.json '*' --fix"
   },
   "dependencies": {
     "@eva-design/eva": "^2.1.1",
