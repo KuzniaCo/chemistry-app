@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import {ApplicationProvider,Layout, Text } from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
