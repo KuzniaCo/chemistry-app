@@ -1,6 +1,8 @@
+
 import { StyleSheet, View } from "react-native";
 import {ApplicationProvider,Layout, Text } from "@ui-kitten/components";
 import * as eva from "@eva-design/eva";
+
 export default function App() {
   return(
   <ApplicationProvider {...eva} theme={eva.light}> 
@@ -30,6 +32,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     alignItems: "center",
+
   },
   text: {
     margin: 4,
