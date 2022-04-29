@@ -1,21 +1,19 @@
-# CHEMISTRY-APP
+# Chemistry App with React-Native
 
-## Workflow
+* * *
 
-[Tasks Board](https://github.com/KuzniaCo/chemistry-app/projects/1) - Please keep you ticket status updated
+## Core Technologies
 
-### Git flow 
+*   React Native
+*   React Native Reanimated v2
+*   React Native Navigation v6
 
-1. Create feature branch
-2. Push your branch on remote repository
-3. Create pull request 
-4. Wait for 2 approves and be ready to provide requested changes
-5. If github allows you to merge, do a squash merge (only PR author should be merging)
+* * *
 
-### Labels
+## Git flow
 
-\*   - Easy 
-
-\**  - Medium
-
-\*** - Hard
+1.  feature branch
+2.  Push your branch on remote repository
+3.  Create pull request
+4.  Wait for 2 approves and be ready to provide requested changes
+5.  If github allows you to merge, do a squash merge (only PR author should be merging)
