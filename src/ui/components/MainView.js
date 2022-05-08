@@ -6,25 +6,6 @@ import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { ScrollView } from "react-native-gesture-handler";
 
 const MainView = () => {
-    // const POPULAR = [
-    //     {
-    //         id: "1",
-    //         title: "first",
-    //     },
-    //     {
-    //         id: "2",
-    //         title: "second",
-    //     },
-    //     {
-    //         id: "3",
-    //         title: "third",
-    //     },
-    //     {
-    //         id: "4",
-    //         title: "fourth",
-    //     },
-    // ];
-
     return (
         <SafeAreaView>
             <StatusBar backgroundColor={"transparent"} translucent />
@@ -45,12 +26,6 @@ const MainView = () => {
                 <View style={styles.popularTextContainer}>
                     <Text style={styles.popularText}>Popularne</Text>
                 </View>
-                {/* <View style={styles.popularItemsContainer}>
-                    <View style={styles.popularItem}></View>
-                    <View style={styles.popularItem}></View>
-                    <View style={styles.popularItem}></View>
-                </View> */}
-                {/* <View style={styles.popularItemsContainer}> */}
                 <ScrollView
                     contentContainerStyle={styles.popularItemsContainer}
                     horizontal={true}
@@ -61,7 +36,6 @@ const MainView = () => {
                     <View style={styles.popularItem}></View>
                     <View style={styles.popularItem}></View>
                 </ScrollView>
-                {/* </View> */}
                 <View style={styles.sectionBar}>
                     <Text style={styles.sectionBarText}>Materiały</Text>
                 </View>
@@ -84,7 +58,6 @@ const styles = StyleSheet.create({
         width: "100%",
         paddingLeft: 25,
         marginTop: 20,
-        // marginBottom: 5,
     },
     hamburgerMenu: {
         textAlign: "left",
@@ -120,19 +93,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: 150,
         width: "170%",
-        // marginVertical: 10,
-        // backgroundColor: "red",
     },
     popularItem: {
         width: 100,
         height: "80%",
         borderRadius: 20,
         backgroundColor: "#697178",
-        // shadowColor: "#171717",
-        // shadowOffset: { width: 0, height: 4 },
-        // shadowOpacity: 0.2,
-        // shadowRadius: 20,
-        // elevation: 10,
     },
     popularText: {
         color: "#466178",
