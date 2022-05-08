@@ -1,25 +1,14 @@
-import {StatusBar, StyleSheet, View} from 'react-native'
-import {useEffect, useState} from 'react'
-import {Calendar, LocaleConfig} from 'react-native-calendars';
-import axios from "axios";
+import { StyleSheet, View } from 'react-native'
+import { useEffect, useState } from 'react'
+import { Calendar, LocaleConfig } from 'react-native-calendars';
 
-const CalendarComponent = ({ userID }) => {
+const CalendarComponent = ({ activeDayList }) => {
     const [activeDays, setActiveDays] = useState({});
-    const url = `/api/${userID}/dates`;
 
     useEffect(() => {
-        getActiveDays();
+        const convertedDates = convertDates(activeDayList);
+        setActiveDays(convertedDates);
     }, []);
-
-    const getActiveDays = async () => {
-        try {
-            const response = await axios.get(url);
-            const convertedDates = convertDates(response.data)
-            setActiveDays(convertedDates)
-        } catch (er) {
-            console.log(er)
-        }
-    }
 
     const convertDates = (dates) => {
         return dates.reduce((prev, curr) => {
@@ -59,7 +48,6 @@ const CalendarComponent = ({ userID }) => {
 
     return (
         <View style={[styles.view]}>
-            <StatusBar backgroundColor={'transparent'} translucent/>
             <Calendar
                 hideArrows={true}
                 hideExtraDays={true}
@@ -71,7 +59,6 @@ const CalendarComponent = ({ userID }) => {
                 style={[styles.calendar, styles.shadowProp]}
                 local
                 theme={{
-                    textMonthFontFamily: 'Inter',
                     backgroundColor: '#729FC4',
                     monthTextColor: '#ffffff',
                     textMonthFontSize: 20,
@@ -101,14 +88,13 @@ export default CalendarComponent
 
 const styles = StyleSheet.create({
     view: {
-        width: '85%',
-        height: '100%',
-        alignContent: 'center',
-        justifyContent: 'center',
+        width: '100%',
         borderRadius: 20,
     },
     calendar: {
         backgroundColor: '#729FC4',
+        width: '85%',
+        alignSelf: 'center',
     },
     shadowProp: {
         shadowColor: '#171717',
