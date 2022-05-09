@@ -8,7 +8,7 @@ const CalendarComponent = ({ activeDayList }) => {
     useEffect(() => {
         const convertedDates = convertDates(activeDayList);
         setActiveDays(convertedDates);
-    }, []);
+    }, [activeDayList]);
 
     const convertDates = (dates) => {
         return dates.reduce((prev, curr) => {
