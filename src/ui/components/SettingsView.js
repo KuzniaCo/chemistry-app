@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { StyleSheet, Button, Switch,View, SafeAreaView, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -7,18 +7,14 @@ const Separator = () => (
 );
 
 const SettingsView =()=>{
-  state = {
-    activeSwitch: null,
-  }
-
-  toggleSwitch = (switchNumber) => {
-    this.setState({
-      activeSwitch: switchNumber === this.state.activeSwitch ? null : switchNumber
-    })
+  const [isShown1, setIsShown1] = useState(false);
+  const toggleTheBox1 = () => {
+    setIsShown1((previousState1) => !previousState1);
   };
-
-  switchOne = (value) => { this.toggleSwitch(1) };
-  switchTwo = (value) => { this.toggleSwitch(2) };
+  const [isShown2, setIsShown2] = useState(false);
+  const toggleTheBox2 = () => {
+    setIsShown2((previousState2) => !previousState2);
+  };
   return (  
     
    
@@ -32,8 +28,9 @@ const SettingsView =()=>{
       <Icon style={styles.icon} name="bells" color="white" size={25} />
       <Text style={styles.title}>  Przypomnienie</Text>
       <Switch
-          onValueChange={this.switchOne}
-          value={this.state.activeSwitch === 1} style={styles.switch}/>
+         onValueChange={toggleTheBox1}
+         value={isShown1} style={styles.switchordinary}/>
+         {isShown1 === true ? <View style={styles.switchshown}></View> : null}
     </View>
     <Separator></Separator>
     <View style={styles.screen}>
@@ -47,8 +44,9 @@ const SettingsView =()=>{
       <Icon style={styles.icon} name="sound" color="white" size={25} />
       <Text style={styles.title}>  Efekty dzwiękowe</Text>
       <Switch
-        onValueChange={this.switchTwo}
-        value={this.state.activeSwitch === 2} style={styles.switch}/>
+        onValueChange={toggleTheBox2}
+        value={isShown2} style={styles.switchordinary}/>
+        {isShown2 === true ? <View style={styles.switchshown}></View> : null}
     </View>
     <Separator></Separator>
     <Separator></Separator>
@@ -95,13 +93,28 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 15,
     backgroundColor: '#619EC6',
   },
+  switchordinary:{
+    alignItems: 'center',
+    fontSize: 22,
+    marginLeft: 'auto',
+    color: 'white',
+  },
   switch:{
     alignItems: 'center',
     justifyContent: 'space-between',
     marginLeft: 'auto',
     fontSize: 22,
+    
     color: 'white',
   },
+  switchshown:{
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginRight: 0,
+    fontSize: 22,
+    color: 'white',
+  },
+  
   icon:{
     alignItems:'center',
 
