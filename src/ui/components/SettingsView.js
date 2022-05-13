@@ -6,23 +6,20 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-class SettingsView extends React.Component{
+const SettingsView =()=>{
   state = {
     activeSwitch: null,
   }
 
-toggleSwitch = (switchNumber) => {
-  this.setState({
-    activeSwitch: switchNumber === this.state.activeSwitch ? null : switchNumber
-  })
-};
+  toggleSwitch = (switchNumber) => {
+    this.setState({
+      activeSwitch: switchNumber === this.state.activeSwitch ? null : switchNumber
+    })
+  };
 
   switchOne = (value) => { this.toggleSwitch(1) };
   switchTwo = (value) => { this.toggleSwitch(2) };
-  
-  render() {  
-   
-    return (  
+  return (  
     
    
   <SafeAreaView style={styles.container}>
@@ -32,81 +29,63 @@ toggleSwitch = (switchNumber) => {
      <Separator></Separator>
      <Separator></Separator>
     <View style={styles.screen}>
-   
-          <Icon style={styles.icon} name="bells" color="white" size={25} />
-       <Text style={styles.title}>  Przypomnienie</Text>
-       <Switch
-           onValueChange={this.switchOne}
-           value={this.state.activeSwitch === 1} style={styles.switch}/>
-
-    </View>
-   <Separator></Separator>
-    <View style={styles.screen}>
-   
-          <Icon  style={styles.icon} name="clockcircleo" color="white" size={25} />
-       <Text style={styles.title}>  Czas przypomnienia</Text>
-       <Text style={styles.switch}>19:30</Text>
-       <Icon style={styles.icon} name="right" color="white" size={25} />
+      <Icon style={styles.icon} name="bells" color="white" size={25} />
+      <Text style={styles.title}>  Przypomnienie</Text>
+      <Switch
+          onValueChange={this.switchOne}
+          value={this.state.activeSwitch === 1} style={styles.switch}/>
     </View>
     <Separator></Separator>
     <View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="sound" color="white" size={25} />
-<Text style={styles.title}>  Efekty dzwiękowe</Text>
-<Switch
-    onValueChange={this.switchTwo}
-    value={this.state.activeSwitch === 2} style={styles.switch}/>
-
-</View>
-<Separator></Separator>
-<Separator></Separator>
-<View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="upload" color="white" size={25} />
-<Text style={styles.title}>  Udostępnij!</Text>
-
-</View>
-<Separator></Separator>
-<View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="notification" color="white" size={25} />
-<Text style={styles.title}>  Feedback</Text>
-
-</View>
-<Separator></Separator>
-<Separator></Separator>
-<View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="questioncircleo" color="white" size={25} />
-<Text style={styles.title}>  Pomoc</Text>
-
-</View>
-<Separator></Separator>
-<View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="filetext1" color="white" size={25} />
-<Text style={styles.title}>  Zasady i warunki</Text>
-
-</View>
-<Separator></Separator>
-<View style={styles.screen}>
-   
-   <Icon style={styles.icon} name="lock1" color="white" size={25} />
-<Text style={styles.title}>  Polityka prywatności</Text>
-
-</View>
-<Separator></Separator>
-<View style={styles.screenred}>
-   
-   <Icon style={styles.icon} name="delete" color="white" size={25} />
-<Text style={styles.title}>  USUŃ KONTO</Text>
-
-</View>
-
+      <Icon  style={styles.icon} name="clockcircleo" color="white" size={25} />
+      <Text style={styles.title}>  Czas przypomnienia</Text>
+      <Text style={styles.switch}>19:30</Text>
+      <Icon style={styles.icon} name="right" color="white" size={25} />
+    </View>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="sound" color="white" size={25} />
+      <Text style={styles.title}>  Efekty dzwiękowe</Text>
+      <Switch
+        onValueChange={this.switchTwo}
+        value={this.state.activeSwitch === 2} style={styles.switch}/>
+    </View>
+    <Separator></Separator>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="upload" color="white" size={25} />
+      <Text style={styles.title}>  Udostępnij!</Text>
+    </View>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="notification" color="white" size={25} />
+      <Text style={styles.title}>  Feedback</Text>
+    </View>
+    <Separator></Separator>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="questioncircleo" color="white" size={25} />
+      <Text style={styles.title}>  Pomoc</Text>
+    </View>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="filetext1" color="white" size={25} />
+      <Text style={styles.title}>  Zasady i warunki</Text>
+    </View>
+    <Separator></Separator>
+    <View style={styles.screen}>
+      <Icon style={styles.icon} name="lock1" color="white" size={25} />
+      <Text style={styles.title}>  Polityka prywatności</Text>
+    </View>
+    <Separator></Separator>
+    <View style={styles.screenred}>
+    <Icon style={styles.icon} name="delete" color="white" size={25} />
+    <Text style={styles.title}>  USUŃ KONTO</Text>
+    </View>
   </SafeAreaView>
     );
 }
-}
+
 export default SettingsView;
 const styles = StyleSheet.create({
   top:{
