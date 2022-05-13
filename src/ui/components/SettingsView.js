@@ -96,18 +96,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#619EC6',
   },
   switch:{
-    alignItems:'flex-end',
+    alignItems: 'center',
     justifyContent: 'space-between',
     marginLeft: 'auto',
     fontSize: 22,
     color: 'white',
   },
   icon:{
-    marginBottom: 'auto',
+    alignItems:'center',
+
     textAlign: "right"
   },
   screen: {
     flexDirection: "row",
+    alignItems: 'center',
     marginHorizontal: 20,
     width: 370,
     height: 60,
@@ -118,6 +120,7 @@ const styles = StyleSheet.create({
   },
   screenred: {
     flexDirection: "row",
+    alignItems: 'center',
     marginHorizontal: 20,
     width: 370,
     height: 60,
@@ -133,8 +136,9 @@ const styles = StyleSheet.create({
     
   },
   title: {
-    marginBottom: 12,
-    fontSize: 25,
+    
+
+    fontSize: 26,
     color: 'white',
   },
   separator: {
