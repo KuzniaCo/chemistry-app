@@ -15,6 +15,7 @@ const MainView = () => {
 		<SafeAreaView>
 			<StatusBar backgroundColor={'transparent'} translucent={false} />
 			<View style={styles.hamburgerMenuContainer}>
+				# Functionality yet to be added
 				<Pressable>
 					<FontAwesome5 name='bars' style={styles.textAlign} size={26} color='#405C73' />
 				</Pressable>
@@ -94,7 +95,6 @@ const styles = StyleSheet.create({
 	},
 	popularItem: {
 		width: 100,
-		// height: '100%',
 		height: 120,
 		borderRadius: 20,
 		backgroundColor: '#697178',
