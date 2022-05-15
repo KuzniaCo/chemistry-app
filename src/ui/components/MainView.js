@@ -15,7 +15,7 @@ const MainView = () => {
 		<SafeAreaView>
 			<StatusBar backgroundColor={'transparent'} translucent={false} />
 			<View style={styles.hamburgerMenuContainer}>
-				# Functionality yet to be added
+				{/* Functionality yet to be added */}
 				<Pressable>
 					<FontAwesome5 name='bars' style={styles.textAlign} size={26} color='#405C73' />
 				</Pressable>
