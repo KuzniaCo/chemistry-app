@@ -1,13 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import MainView from "./src/ui/components/MainView";
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
 const App = () => {
-    return (
-        <View>
-            <MainView />
-        </View>
-    );
+	return (
+		<View>
+			<Text>App</Text>
+		</View>
+	);
 };
 
 export default App;
