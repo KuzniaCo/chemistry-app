@@ -13,7 +13,6 @@ const MainView = () => {
 	];
 	return (
 		<SafeAreaView>
-			<StatusBar backgroundColor={'transparent'} translucent={false} />
 			<View style={styles.hamburgerMenuContainer}>
 				{/* Functionality yet to be added */}
 				<Pressable>
@@ -35,7 +34,7 @@ const MainView = () => {
 						<View style={styles.popularItem}>
 							<Text>{item.name}</Text>
 						</View>
-					)}></Animated.FlatList>
+					)} />
 				<View style={styles.sectionBar}>
 					<Text style={styles.sectionBarText}>Materiały</Text>
 				</View>
