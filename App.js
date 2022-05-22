@@ -1,13 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import react,{useState,useEffect} from "react";
+import { StyleSheet, Text, View,Button,TouchableOpacity,TouchableHighlight,Image} from "react-native";
+import UserProfileView from "./src/UserProfileView.js"
 
-const App = () => {
+export default function App() {
     return (
-        <View>
-            <Text>App</Text>
-        </View>
+        <UserProfileView/>
     );
-};
-
-export default App;
+}
 

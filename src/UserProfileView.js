@@ -11,9 +11,9 @@ const  UserProfileView = () => {
     <SafeAreaView style={{flex:1}} >
         <View style={{flex:0.5,justifyContent:"center",alignItems:"center"}}>
         <TouchableOpacity style={styles.cornerButton}>
-        <Image source={require('my-app/assets/arrow.png')} />
+        <Image source={require('chemistry-app/assets/arrow.png')} />
         </TouchableOpacity>
-          <Image source={require('my-app/assets/icon.png')} style = {styles.profilePhoto}/>
+          <Image source={require('chemistry-app/assets/icon.png')} style = {styles.profilePhoto}/>
           <View style={styles.userBox}>
           <Text style={styles.user}>nazwa użytkownika</Text>
           </View>
