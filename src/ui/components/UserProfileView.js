@@ -11,11 +11,13 @@ const  UserProfileView = () => {
     <SafeAreaView style={{flex:1}} >
         <View style={{flex:0.5,justifyContent:"center",alignItems:"center"}}>
         <TouchableOpacity style={styles.cornerButton}>
-        <Image source={require('chemistry-app/assets/arrow.png')} />
+        <View>
+            <Image source={require('chemistry-app/assets/arrow.png')} />
+        </View>
         </TouchableOpacity>
           <Image source={require('chemistry-app/assets/icon.png')} style = {styles.profilePhoto}/>
           <View style={styles.userBox}>
-          <Text style={styles.user}>nazwa użytkownika</Text>
+            <Text style={styles.user}>nazwa użytkownika</Text>
           </View>
         </View>
         <View style={styles.buttonSection}>
@@ -33,10 +35,10 @@ const styles = StyleSheet.create({
     height:150,
     width:150,
     borderRadius:100,
-    shadowColor:100
+    shadowColor:'red',
   },
   buttonSection:{
-    backgroundColor:"lightblue",
+    backgroundColor:"#729fc4",
     flex:0.5,
     borderTopLeftRadius:20,
     borderTopRightRadius:20,
@@ -45,11 +47,15 @@ const styles = StyleSheet.create({
   },
   user:{
       fontSize:20,
-      textDecorationLine: 'underline',
+      margin:7,
+      
   },
   userBox:{
-    marginTop:15,
-    borderBottomColor:"black",
+    margin:15,
+    paddingRight:15,
+    paddingLeft:15,
+    borderStyle:"solid",
+    borderBottomWidth:2,
     
   },
   customButton: {
@@ -66,7 +72,7 @@ const styles = StyleSheet.create({
     color:"#6b8498",
   },
   cornerButton:{
-      backgroundColor:"lightblue",
+      backgroundColor:"#729fc4",
       height:100,
       width:100,
       alignSelf:"flex-start",
