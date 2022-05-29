@@ -4,7 +4,7 @@
 
 ### Requirements
 
-In order to use SVGs, make sure `react-native-svg` library is present.
+In order to use SVGs, make sure `react-native-svg` library is present. If not, install it by running `expo install react-native-svg` in an appropriate directory. For more information about this library, visit `https://github.com/react-native-svg/react-native-svg`.
 
 ### How and where to store SVGs
 
