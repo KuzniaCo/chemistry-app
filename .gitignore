@@ -13,3 +13,7 @@ web-build/
 
 # macOS
 .DS_Store
+
+# markdown backups
+*.md.backup
+
