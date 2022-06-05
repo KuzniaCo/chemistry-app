@@ -20,6 +20,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-calendars": "^1.1283.0",
+    "react-native-gesture-handler": "^2.4.1",
     "react-native-gesture-handler": "~2.1.0",
     "react-native-nav": "^2.0.2",
     "react-native-navigation-bar": "^0.2.1",
